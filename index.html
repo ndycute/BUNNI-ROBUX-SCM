@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUNNI ROBUX - Shop Robux & Vòng Quay May Mắn</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+--bg-color: #e0f2fe;
+--primary: #38bdf8;
+--primary-dark: #0284c7;
+--accent: #f472b6;
+--text-dark: #1e293b;
+--card-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: var(--bg-color);
+color: var(--text-dark);
+position: relative;
+min-height: 100vh;
+overflow-x: hidden;
+padding-bottom: 50px;
+}
+
+/* Background Clouds Animation */
+.cloud-bg {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 0;
+overflow: hidden;
+}
+
+.cloud {
+position: absolute;
+background: #ffffff;
+border-radius: 100px;
+opacity: 0.8;
+animation: moveClouds linear infinite;
+}
+
+.cloud::before, .cloud::after {
+content: '';
+position: absolute;
+background: #ffffff;
+border-radius: 50%;
+}
+
+.cloud1 { width: 120px; height: 40px; top: 10%; animation-duration: 25s; }
+.cloud1::before { width: 50px; height: 50px; top: -20px; left: 20px; }
+.cloud1::after { width: 40px; height: 40px; top: -15px; left: 55px; }
+
+.cloud2 { width: 180px; height: 60px; top: 35%; animation-duration: 35s; animation-delay: -10s; }
+.cloud2::before { width: 70px; height: 70px; top: -30px; left: 30px; }
+.cloud2::after { width: 60px; height: 60px; top: -20px; left: 80px; }
+
+.cloud3 { width: 140px; height: 45px; top: 65%; animation-duration: 30s; animation-delay: -5s; }
+.cloud3::before { width: 55px; height: 55px; top: -25px; left: 25px; }
+.cloud3::after { width: 45px; height: 45px; top: -15px; left: 65px; }
+
+@keyframes moveClouds {
+from { left: -200px; }
+to { left: 100vw; }
+}
+
+/* Container */
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 0 15px;
+position: relative;
+z-index: 1;
+}
+
+/* Header */
+header {
+background: var(--card-bg);
+backdrop-filter: blur(5px);
+padding: 15px 20px;
+border-radius: 0 0 25px 25px;
+box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+border: 2px solid #bae6fd;
+}
+
+.logo-area {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.logo-img {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+object-fit: cover;
+border: 2px solid var(--accent);
+}
+
+.logo-title {
+font-size: 24px;
+font-weight: 800;
+color: #0284c7;
+text-shadow: 1px 1px 0px #fff;
+}
+
+.admin-toggle-btn {
+background: #f0f9ff;
+border: 2px dashed var(--primary);
+color: var(--primary-dark);
+padding: 8px 15px;
+border-radius: 20px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.admin-toggle-btn.active {
+background: var(--accent);
+color: white;
+border-style: solid;
+}
+
+/* Admin Notice Banner */
+.admin-banner {
+display: none;
+background: #fef2f2;
+border: 2px solid #fca5a5;
+color: #991b1b;
+padding: 10px;
+border-radius: 12px;
+text-align: center;
+margin-bottom: 20px;
+font-size: 14px;
+}
+.admin-banner.show { display: block; }
+
+/* Section Layout */
+.main-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 25px;
+}
+
+@media(min-width: 768px) {
+.main-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+background: var(--card-bg);
+border-radius: 24px;
+padding: 20px;
+border: 2px solid #ffffff;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+font-size: 20px;
+color: var(--primary-dark);
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+gap: 8px;
+border-bottom: 2px dashed #e
